@@ -1,0 +1,7 @@
+{
+  "name": "BestMovies",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

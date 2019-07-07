@@ -1,0 +1,167 @@
+.login-container {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login {
+        color: #464646;
+        .login-message {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            .appname {
+                padding: 10px;
+                font-size: 45px;
+                text-align: center;
+            }
+            .message {
+                font-size: 20px;
+            }
+        }
+        .login-button {
+            width: 100%;
+            padding: 20px;
+            height: auto;
+            .btn {
+                margin-top: 10px;
+                width: 100%;
+                height: 45px;
+                background-color: #70222b;
+                color: white;
+                border-radius: 20px;
+            }
+        }
+    }
+}
+
+.account-info {
+    width: 100%;
+    height: 150px;
+    background-color: #0a0a0a;
+    .account-picture {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+        }
+    }
+    .account-name {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+}
+
+.account-menu {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .menu-item {
+        padding: 5px 10px;
+        border-bottom: 3px solid black;
+        span {
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+        }
+    }
+    .active {
+        border-bottom: 3px solid #cd4851;
+    }
+}
+
+.menu-content {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    .user-list-content {
+        .add-new-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 60px;
+            margin-bottom: 20px;
+            ion-icon {
+                background-color: #353535;
+                border-radius: 50%;
+            }
+        }
+        .list {
+            width: 100%;
+            height: calc(50vw - 20px);
+            background-color: #353535;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            .title {
+                color: white;
+                font-size: 25px;
+            }
+            .sub-title {
+                color: white;
+            }
+        }
+        .action {
+            position: absolute;
+            bottom: 0px;
+            color: #cd4851;
+            font-size: 25px;
+        }
+    }
+    .user-watchlist-content {
+        color: white;
+        .list-item {
+            display: flex;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #353535;
+            .movie-poster {
+                width: 50px;
+                height: 75px;
+                img {
+                    width: 50px;
+                    height: 75px;
+                    border-radius: 10px;
+                }
+            }
+            .movie-info {
+                width: calc(100% - 100px);
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 14px;
+            }
+            .action {
+                width: 50px;
+                height: 75px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                ion-icon {
+                    font-size: 30px;
+                    font-weight: bold;
+                    color: #cd4851;
+                }
+            }
+        }
+    }
+}

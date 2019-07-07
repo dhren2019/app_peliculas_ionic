@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-searchbar mode="ios" #searchbar class="testo" placeholder="Discover films..." debounce="1000" showCancelButton cancelButtonText="Cancelar" [(ngModel)]="searchText" (ionChange)="searchMovie(searchText)"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <loading-icon *ngIf="!isDataLoaded"></loading-icon>
+
+    <div class="movie-list">
+        <div class="movie-content" *ngFor="let movie of movieList" [routerLink]="['/tabs/search/movie-detail/', movie.id]">
+            <div class="movie-image">
+                <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" />
+            </div>
+            <div class="movie-info">
+                <span class="movie-title">{{ movie.title }}</span>
+                <!-- <span class="movie-date">{{ movie.relase_date }}</span> -->
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,107 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="primary" *ngIf="isSessionExist">
+            <ion-button (click)="logout()">
+                <ion-icon slot="icon-only" name="log-out"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Profile</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="login-container" *ngIf="!isSessionExist">
+        <div class="login">
+            <div class="login-message">
+                <span class="appname">Discover the best movies</span>
+                <span class="messsage">Please login to the application to see your account.</span>
+            </div>
+            <div class="login-button">
+                <button class="btn" (click)="login();">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="isSessionExist">
+        <div class="account-info">
+            <div class="account-picture">
+                <img src="https://www.gravatar.com/avatar/bfe90ba6a545766dfba93673d254c730" onError="this.src = '../assets/images/no-image-poster.png'" />
+            </div>
+
+            <div class="account-name">
+                <span>{{loggedUser?.username}}</span>
+            </div>
+        </div>
+
+        <div class="account-menu">
+
+            <div class="menu-item" [ngClass]="{'active': selectedMenu == 'list'}" (click)="changeTab('list')">
+                <span>Lists</span>
+            </div>
+
+            <div class="menu-item" [ngClass]="{'active': selectedMenu == 'watchlist'}" (click)="changeTab('watchlist')">
+                <span>Watchlist</span>
+            </div>
+
+            <div class="menu-item" [ngClass]="{'active': selectedMenu == 'favorite'}" (click)="changeTab('favorite')">
+                <span>Favorites</span>
+            </div>
+
+        </div>
+
+        <loading-icon *ngIf="!isDataLoaded"></loading-icon>
+
+        <div class="menu-content">
+
+            <div class="user-list-content" *ngIf="selectedMenu == 'list'">
+                <div class="add-new-list">
+                    <ion-icon name="add" (click)="addNewList();"></ion-icon>
+                </div>
+                <div class="list" *ngFor="let list of userLists">
+                    <span class="title" (click)="showListDetail(list)">
+            {{list.name}}
+          </span>
+                    <span class="sub-title" (click)="showListDetail(list)">
+            {{list.item_count}} item - {{list.list_type}}
+          </span>
+                    <div class="action" (click)="deleteList(list)">
+                        <ion-icon name="trash"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-watchlist-content" *ngIf="selectedMenu == 'watchlist'">
+                <div class="movie-list">
+                    <div class="list-item" *ngFor="let item of userWatchList">
+                        <div class="movie-poster">
+                            <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" onError="this.src = '../assets/images/no-image-poster.png'" />
+                        </div>
+                        <div class="movie-info">
+                            <span class="title">{{item.title}}</span>
+                        </div>
+                        <div class="action" (click)="removeFromWatchList(item)">
+                            <ion-icon name="bookmark"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-watchlist-content" *ngIf="selectedMenu == 'favorite'">
+                <div class="list-item" *ngFor="let item of userFavoriteList">
+                    <div class="movie-poster">
+                        <img src="https://image.tmdb.org/t/p/w500/{{item.poster_path}}" onError="this.src = '../assets/images/no-image-poster.png'" />
+                    </div>
+                    <div class="movie-info">
+                        <span class="title">{{item.title}}</span>
+                    </div>
+                    <div class="action" (click)="removeFromFavoriteList(item)">
+                        <ion-icon name="heart"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</ion-content>

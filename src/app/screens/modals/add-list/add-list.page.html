@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New List</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  
+  <div class="form-content">
+    <div class="form-component">
+      <span class="form-label">Title</span>
+      <input class="form-input" [(ngModel)]="title" />
+    </div>
+
+    <div class="form-component">
+      <span class="form-label">Description</span>
+      <textarea class="form-textarea" [(ngModel)]="description"></textarea>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="full" fill="clear" class="save-button" (click)="createNewList()">
+      Create
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
