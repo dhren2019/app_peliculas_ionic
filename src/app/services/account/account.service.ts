@@ -82,7 +82,7 @@ export class AccountService {
 
     let isSessionExist = this.authService.checkUserSession();
     if (!isSessionExist) {
-      this.coreService.showAlertMessage('You should login to app for adding to watchlist!');
+      this.coreService.showAlertMessage('Debes iniciar sesión en la aplicación para añadir a guardados!');
       return Observable.create((o: any) => { o.next(false); o.complete(); });
     }
     else {
@@ -113,7 +113,7 @@ export class AccountService {
 
     let isSessionExist = this.authService.checkUserSession();
     if (!isSessionExist) {
-      this.coreService.showAlertMessage('You should login to app for mark as favorite!');
+      this.coreService.showAlertMessage('Debes iniciar sesión en la aplicación para añadir a favoritos!');
       return Observable.create((o: any) => { o.next(false); o.complete(); });
     }
     else {

@@ -19,7 +19,7 @@ export class CoreService {
 
   async showAlertMessage(message: string) {
     const alert = await this.alertController.create({
-      header: 'Alert',
+      header: 'Alerta',
       message: message,
       buttons: ['OK']
     });

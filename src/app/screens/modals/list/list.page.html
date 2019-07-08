@@ -1,23 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Your Movie Lists</ion-title>
-    <ion-buttons slot="primary">
-      <ion-button (click)="closeModal()">
-        <ion-icon slot="icon-only" name="close"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Tus Listas de Películas</ion-title>
+        <ion-buttons slot="primary">
+            <ion-button (click)="closeModal()">
+                <ion-icon slot="icon-only" name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <loading-icon *ngIf="!isDataLoaded"></loading-icon>
+    <loading-icon *ngIf="!isDataLoaded"></loading-icon>
 
-  <div class="content">
-    <div class="list-item" *ngFor="let item of userLists" [ngClass]="{'selected': item.id == selectedListID}" (click)="selectList(item);">
-      {{item.name}}
+    <div class="content">
+        <div class="list-item" *ngFor="let item of userLists" [ngClass]="{'selected': item.id == selectedListID}" (click)="selectList(item);">
+            {{item.name}}
+        </div>
     </div>
-  </div>
 
 
 </ion-content>
@@ -25,7 +25,7 @@
 <ion-footer>
     <ion-toolbar>
         <ion-button expand="full" fill="clear" class="save-button" (click)="saveMovie()">
-            Save
-          </ion-button>
+            Guardar
+        </ion-button>
     </ion-toolbar>
-  </ion-footer>
+</ion-footer>

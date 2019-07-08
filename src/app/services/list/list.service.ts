@@ -39,7 +39,7 @@ export class ListService {
   getListsDetail(listID: number | string): Observable<ListDetail> {
     let isSessionExist = this.authService.checkUserSession();
     if (!isSessionExist) {
-      this.coreService.showAlertMessage('You should login to app for add item to your lists!');
+      this.coreService.showAlertMessage('¡Debes iniciar sesión en la aplicación para agregar un elemento a tus listas!');
       return Observable.create((o: any) => { o.next(false); o.complete(); });
     }
     else {
@@ -57,7 +57,7 @@ export class ListService {
 
     let isSessionExist = this.authService.checkUserSession();
     if (!isSessionExist) {
-      this.coreService.showAlertMessage('You should login to app for add item to your lists!');
+      this.coreService.showAlertMessage('¡Debes iniciar sesión en la aplicación para agregar un elemento a tus listas!');
       return Observable.create((o: any) => { o.next(false); o.complete(); });
     }
     else {
@@ -81,7 +81,7 @@ export class ListService {
 
     let isSessionExist = this.authService.checkUserSession();
     if (!isSessionExist) {
-      this.coreService.showAlertMessage('You should login to app for add item to your lists!');
+      this.coreService.showAlertMessage('¡Debes iniciar sesión en la aplicación para agregar un elemento a tus listas!');
       return Observable.create((o: any) => { o.next(false); o.complete(); });
     }
     else {

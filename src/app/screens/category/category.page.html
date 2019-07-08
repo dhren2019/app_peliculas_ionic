@@ -1,17 +1,17 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Categories</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Categorias</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
 
-  <div class="gender-content">
-    <div class="gender-item" *ngFor="let gender of genderList | async" [routerLink]="['/tabs/category/search-list/', gender.id, gender.name]">
-      <span>{{gender.name}}</span>
+    <div class="gender-content">
+        <div class="gender-item" *ngFor="let gender of genderList | async" [routerLink]="['/tabs/category/search-list/', gender.id, gender.name]">
+            <span>{{gender.name}}</span>
+        </div>
     </div>
-  </div>
-  
+
 
 
 </ion-content>

@@ -14,7 +14,8 @@ export class CustomHttpInterceptor implements HttpInterceptor {
 		request = request.clone({
 			url: `${environment.baseUrl}${request.url}`,
 			setParams: {
-				api_key: "3299dd2b83a5ef85bfac9dfe10cb2e17"
+				api_key: "3299dd2b83a5ef85bfac9dfe10cb2e17",
+				language: "es-ES"
 			}
 		});
 

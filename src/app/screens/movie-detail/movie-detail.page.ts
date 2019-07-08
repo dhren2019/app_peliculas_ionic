@@ -35,6 +35,7 @@ export class MovieDetailPage implements OnInit {
   rate: number = 0;
   private isFavorite: boolean = false;
   private isOnWatchlist: boolean = false;
+  oculto = 150;
 
   constructor(private navCtrl: NavController,
     private activatedRoute: ActivatedRoute,
