@@ -1,6 +1,6 @@
 # MovieBank
 
-MovieBank is an app that you can explore and evaluate more than 28,000 movies. This app is developed with Ionic 4.  
+MovieBank is an app that you can explore and evaluate more than 28,000 movies. This app is developed with Ionic 4 & Angular.  
 
 ## Screenshots
 
@@ -12,54 +12,56 @@ MovieBank is an app that you can explore and evaluate more than 28,000 movies. T
 <img src="/screenshots/image7.png" width="210">&nbsp;
 <img src="/screenshots/image8.png" width="210">&nbsp;
 
-## Features
-  - See top rated movies
-  - See popular movies
-  - See upcoming movies
-  - See movie's detail
-  - Rate movie
-  - Add Movie to watch list
-  - Search for movies.
-  - Search movies by genres
-  - Share movie
+## Caracteristicas
+   - Ver películas mejor valoradas
+   - ver películas populares
+   - Ver próximas películas.
+   - Ver detalle de la película.
+   - Calificar película
+   - Añadir película a la lista de reproducción
+   - Búsqueda de películas.
+   - Buscar películas por géneros
+   - Compartir película
 
-## Requirements
+## Requerimientos
   - [Nodejs](https://nodejs.org/en/)
   - [Apache Cordova](https://cordova.apache.org/)
   - [Ionic](https://ionicframework.com/)
 
 
-## Installation
 
-You'll need a few things before we get started. 
-Make sure you have nodejs installed, if you not. You should install [Nodejs](https://nodejs.org/en/).
+## Instalación
 
-Then run the following command to install Ionic, if you don't have that yet
-```sh
+Necesitará algunas cosas antes de comenzar.
+Asegúrese de que tiene nodejs instalado, si no es así. Debe instalar [Nodejs] (https://nodejs.org/en/).
+
+Luego ejecute el siguiente comando para instalar Ionic, si aún no lo tiene
+`` `sh
 npm install cordova ionic -g
-```
-Once you clone this repository, run this command to install all needed dependencies.
-```sh
+`` `
+Una vez que haya clonado este repositorio, ejecute este comando para instalar todas las dependencias necesarias.
+`` `sh
 npm install
-```
-After installing the needed dependencies you are done, run this command to launch app on browser.
-```sh
+`` `
+Después de instalar las dependencias necesarias que haya terminado, ejecute este comando para iniciar la aplicación en el navegador.
+`` `sh
 ionic serve
-```
-Run app on real device 
+`` `
+Ejecutar aplicación en dispositivo real
 
-For Android
+Para Android
 ```sh
 ionic cordova platform add android
 ionic cordova run android
 ```
-For iOS
+Para iOS
 ```sh
 ionic cordova platform add ios
 ionic cordova run ios
 ```
 
-## Resources
+## Recursos
+
 [The MovieDB API](https://developers.themoviedb.org/3/getting-started/introduction)
 
 
